@@ -1,0 +1,218 @@
+/* ============================= */
+/*  Global Theme & Variables     */
+/*  Keeping colours consistent   */
+/* ============================= */
+
+:root {
+    --bg: #0a0f1c;          /* Main dark background */
+    --card: #111827;        /* Card background */
+    --accent: #00f5c4;      /* Neon energy green */
+    --accent2: #3b82f6;     /* Electric blue */
+    --text: #e5e7eb;        /* Main readable text */
+    --muted: #9ca3af;       /* Subtle secondary text */
+}
+
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Main page styling */
+body {
+    background: radial-gradient(circle at top left, #0f172a, #0a0f1c 60%);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* ===================================== */
+/* Animated Grid Background (Energy vibe)*/
+/* ===================================== */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveGrid 20s linear infinite;
+    z-index: -1;
+}
+
+/* Subtle movement so page feels alive */
+@keyframes moveGrid {
+    from { transform: translate(0,0); }
+    to { transform: translate(-40px,-40px); }
+}
+
+/* ============================= */
+/* Header Section                */
+/* ============================= */
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Your name – make it bold and powerful */
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle under your name */
+header .subtitle {
+    font-size: 1.2rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* Intro paragraph */
+header .intro {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    max-width: 650px;
+}
+
+/* Profile picture styling */
+header .profile-pic {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Slight hover effect so it feels interactive */
+header .profile-pic:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px var(--accent);
+}
+
+/* ============================= */
+/* Buttons                       */
+/* ============================= */
+
+.btn {
+    margin-top: 2rem;
+    padding: 0.9rem 1.8rem;
+    border-radius: 40px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    border: none;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--accent);
+}
+
+/* ============================= */
+/* General Sections              */
+/* ============================= */
+
+section {
+    padding: 6rem 10%;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+}
+
+/* ============================= */
+/* Project Cards                 */
+/* ============================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 16px;
+    transition: 0.4s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(0, 245, 196, 0.3);
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* ============================= */
+/* Stats Section                 */
+/* ============================= */
+
+.stats {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+/* ============================= */
+/* Contact Links                 */
+/* ============================= */
+
+.contact-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.contact-link:hover {
+    color: white;
+    text-shadow: 0 0 15px var(--accent);
+}
+
+/* ============================= */
+/* Footer                        */
+/* ============================= */
+
+footer {
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
