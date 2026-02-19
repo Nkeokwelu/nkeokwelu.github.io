@@ -169,9 +169,7 @@ section {
     color: var(--accent);
 }
 
-.card p,
-.card ul li,
-.card ol li{
+.card p{
     color: var(--muted);
     font-size: 0.95rem;
     text-align: justify;
