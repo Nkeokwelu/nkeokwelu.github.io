@@ -176,12 +176,13 @@ section {
     font-size: 0.95rem;
     text-align: justify;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 0.2rem;
 }
 
 .card h4 {
-    color: #e5e7eb;
+    text-emphasis-color: #e5e7eb;
 }
+
 /* ============================= */
 /* Stats Section                 */
 /* ============================= */
