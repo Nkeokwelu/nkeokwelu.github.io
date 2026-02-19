@@ -169,15 +169,19 @@ section {
     color: var(--accent);
 }
 
-.card p, .card div, .card div ul li, .card div ol li {
+.card p,
+.card ul li,
+.card ol li{
     color: var(--muted);
     font-size: 0.95rem;
-    text-align: justify;      /* Makes the paragraph fill the width of the card */
-    line-height: 1.6;         /* Adds readability */
-    margin-bottom: 2.0rem;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
-
+.card h4 {
+    color: #e5e7eb;
+}
 /* ============================= */
 /* Stats Section                 */
 /* ============================= */
