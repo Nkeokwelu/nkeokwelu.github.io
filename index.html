@@ -120,17 +120,34 @@
 
         <!-- Project 3 -->
         <div class="card">
-            <h3>Carbon Intensity Analysis</h3>
+            <h3>Comparing ESN and XGB for GB Day-Ahead EPF without exogenous inputs</h3>
             <p>
-                Evaluated emissions data to optimise supply mix and reduce operational carbon footprint.
-            </p>
-            <!-- <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.2rem;">
-                Tools used: R, tidyverse, ggplot2
-            </p> -->
+                Data:
+                Source: Nord Pool (Hourly prices, 2020–2024).
+                Preprocessed for daylight saving adjustments.
+                
+                Approach:
+                Time series analysis & decomposition.
+                Supervised dataset: previous day/week → next day.
+                Models: ESN (Echo State Network), XGBoost, Naive baseline.
+                Hyperparameter tuning via Bayesian Optimization fro ESN.
+                
+                Key Insights (1-Year Test Data)
+                <ol>
+                    <li>ESN outperforms both XGBoost and Naive models, achieving the lowest RMSE (£16.13) and MAPE (24.94%).</li>
+                    <li>ESN effectively captures non-linear dynamics and short-term variations in UK day-ahead electricity prices.</li>
+                    <li>Naive performs reasonably but is less sophisticated, while XGBoost is competitive yet slightly behind ESN.</li>
+                </ol>
+                Conclusion: 
+                ESN is the most effective model for day-ahead UK electricity price forecasting without exogenous inputs, providing a strong benchmark for GB DA EPF.
+                </p>
+            <i style="display: block; margin-bottom: 1.1rem;">
+                Tools used: Python, numpy, pandas, statsmodels, bayesian-optimization, Excel, etc.
+            </i>
             <!-- Link to full notebook or GitHub repo -->
-            <!-- <a href="https://github.com/Nkeokwelu/BellaBeat-Case-Study" target="_blank" class="contact-link">
+            <a href="https://github.com/Nkeokwelu/GB-DA-EPF/blob/main/DissertationESN.ipynb" target="_blank" class="contact-link">
                 View Full Analysis
-            </a> -->
+            </a>
         </div>
 
     </div>
