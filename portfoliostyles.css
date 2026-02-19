@@ -169,7 +169,7 @@ section {
     color: var(--accent);
 }
 
-.card p{
+.card p, .card div{
     color: var(--muted);
     font-size: 0.95rem;
     text-align: justify;
@@ -178,7 +178,7 @@ section {
 }
 
 .card ol li, .card ul li {
-    margin-bottom: 0.5rem; /* spacing between list items */
+    margin-bottom: 0.9rem; /* spacing between list items */
 }
 
 /* ============================= */
