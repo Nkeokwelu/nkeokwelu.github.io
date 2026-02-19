@@ -169,7 +169,7 @@ section {
     color: var(--accent);
 }
 
-.card p, .card div{
+.card p, .card div ul, .card div ol{
     color: var(--muted);
     font-size: 0.95rem;
     text-align: justify;
