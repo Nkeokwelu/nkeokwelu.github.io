@@ -169,7 +169,7 @@ section {
     color: var(--accent);
 }
 
-.card p, .card div, .card div ul li, {
+.card p, .card div, .card div ul li, .card div ol li {
     color: var(--muted);
     font-size: 0.95rem;
     text-align: justify;      /* Makes the paragraph fill the width of the card */
