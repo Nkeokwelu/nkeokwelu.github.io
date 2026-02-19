@@ -169,12 +169,18 @@ section {
     color: var(--accent);
 }
 
-.card p, .card div, .card div ul li, .card div h5 {
+.card p, .card div, .card div ul li, {
     color: var(--muted);
     font-size: 0.95rem;
     text-align: justify;      /* Makes the paragraph fill the width of the card */
     line-height: 1.6;         /* Adds readability */
-    margin-bottom: 8.0rem;
+    margin-bottom: 2.0rem;
+}
+.card div h5 {
+    color: white;
+    font-size: 0.95rem;
+    text-align: justify;      /* Makes the paragraph fill the width of the card */
+    line-height: 1.6;         /* Adds readability *
 }
 
 /* ============================= */
