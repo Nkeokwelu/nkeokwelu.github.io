@@ -120,27 +120,35 @@
 
         <!-- Project 3 -->
         <div class="card">
-            <h3>Comparing ESN and XGB for GB Day-Ahead EPF without exogenous inputs</h3>
-            <p>
-                Data:
-                Source: Nord Pool (Hourly prices, 2020–2024).
-                Preprocessed for daylight saving adjustments.
-                
-                Approach:
-                Time series analysis & decomposition.
-                Supervised dataset: previous day/week → next day.
-                Models: ESN (Echo State Network), XGBoost, Naive baseline.
-                Hyperparameter tuning via Bayesian Optimization fro ESN.
-                
-                Key Insights (1-Year Test Data)
-                <ol>
+            <h3>Comparing ESN and XGB for GB DA EPF without exogenous inputs</h3>
+            <div>
+                <h5>Data</h5>
+                <ul>
+                    <li>Source: Nord Pool (Hourly prices, 2020–2024).</li>
+                    <li>Preprocessed for daylight saving adjustments.</li>
+                </ul>
+            
+                <h5>Approach</h5>
+                <ul>
+                    <li>Time series analysis & decomposition.</li>
+                    <li>Supervised dataset: previous day/week → next day.</li>
+                    <li>Models: ESN (Echo State Network), XGBoost, Naive baseline.</li>
+                    <li>Hyperparameter tuning via Bayesian Optimization for ESN.</li>
+                </ul>
+            
+                <h5>Key Insights (1-Year Test Data)</h5>
+                <ul>
                     <li>ESN outperforms both XGBoost and Naive models, achieving the lowest RMSE (£16.13) and MAPE (24.94%).</li>
                     <li>ESN effectively captures non-linear dynamics and short-term variations in UK day-ahead electricity prices.</li>
-                    <li>Naive performs reasonably but is less sophisticated, while XGBoost is competitive yet slightly behind ESN.</li>
-                </ol>
-                Conclusion: 
-                ESN is the most effective model for day-ahead UK electricity price forecasting without exogenous inputs, providing a strong benchmark for GB DA EPF.
+                    <li>Naive performs reasonably but is less sophisticated, while XGBoost is competitive but slightly behind ESN.</li>
+                </ul>
+            
+                <h5>Conclusion</h5>
+                <p>
+                    ESN is the most effective model for day-ahead UK electricity price forecasting without exogenous inputs, 
+                    providing a strong benchmark for GB DA EPF.
                 </p>
+            </div>
             <i style="display: block; margin-bottom: 1.1rem;">
                 Tools used: Python, numpy, pandas, statsmodels, bayesian-optimization, Excel, etc.
             </i>
