@@ -164,13 +164,13 @@ section {
     box-shadow: 0 0 30px rgba(0, 245, 196, 0.3);
 }
 
-/* .card p, .card h3, .card div ul, .card div ol{
+.card p, .card h3, .card div ul, .card div ol{
     color: var(--accent);
     font-size: 0.95rem;
     text-align: justify;
     line-height: 1.6;
-    margin-bottom: 0.02rem;
-} */
+    margin-bottom: 0.01rem;
+}
 
 .card ol li, .card ul li {
     margin-bottom: 0.9rem; /* spacing between list items */
