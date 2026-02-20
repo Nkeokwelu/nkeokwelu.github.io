@@ -164,7 +164,7 @@ section {
     box-shadow: 0 0 30px rgba(0, 245, 196, 0.3);
 }
 
-.card p, .card div ul, .card div ol{
+.card p, .card h3, .card div ul, .card div ol{
     color: var(--muted);
     font-size: 0.95rem;
     text-align: justify;
