@@ -165,7 +165,7 @@ section {
 }
 
 .card h3 {
-    color: var(--muted);
+    color: var(--accent);
 }
 
 .card p, .card div ul, .card div ol{
