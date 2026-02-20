@@ -164,9 +164,8 @@ section {
     box-shadow: 0 0 30px rgba(0, 245, 196, 0.3);
 }
 
-.card h4 {
-    margin-bottom: 1rem;
-    color: white;
+.card h3 {
+    color: var(--muted);
 }
 
 .card p, .card div ul, .card div ol{
