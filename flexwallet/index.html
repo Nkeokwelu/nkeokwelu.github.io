@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FLEXWALLET</title>
+        <!-- jQuery Mobile CSS -->
+        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+        <!-- jQuery UI CSS -->
+        <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- jQuery and jQuery UI JS -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js" id="cordova-jquery"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- jQuery Mobile JS -->
+        <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div id="deviceready">
+
+           <!-- Page 1: Welcome Page -->
+            <div data-role="page" id="page1">
+                <div data-role="main" class="ui-content">
+                    <!-- FLEXWALLET Logo -->
+                    <h1><b class="logo">FLEXWALLET</b></h1>
+                    <hr>
+                    <!-- Welcome Message and Button -->
+                    <center id="page1-center" style="margin-top: 550px;">
+                        <p>Welcome to FLEXWALLET</p>
+                        <p><i>...simplifying banking with Open Bank Project API.</i></p>
+                        <!-- Button to continue and login using Open Bank Project API credentials-->
+                        <a href="#page2?refresh=<%= Math.random() %>">
+                            <button id="welcome" style="background-color: rgb(241, 135, 5); color: white; width: 35%; letter-spacing:0.1vw;">
+                                <b style="font-size: 80%;">LOGIN WITH OBP CREDENTIALS</b>
+                            </button>
+                        </a>
+                        <a href="">
+                            <button id="welcome" style="background-color: rgb(241, 135, 5); color: white; width: 35%; letter-spacing:0.1vw;">
+                                <b style="font-size: 80%;">LOGIN WITH FLEXWALLET CREDENTIALS</b>
+                            </button>
+                        </a>
+                    </center>
+                </div>
+            </div>
+
+
+            <!-- Page 2: Login Page -->
+            <div data-role="page" id="page2">
+                <!-- Header with Logo -->
+                <div data-role="header" class="header">
+                    <br>
+                    <br>
+                    <!-- FLEXWALLET Logo -->
+                    <h1><b class="logo" style="letter-spacing: 0.1vw;">FLEXWALLET</b></h1>
+                    <hr>
+                </div>
+            
+                <!-- Main Content: Login Form -->
+                <div data-role="main" class="ui-content">
+                    <br><br><br><br><br><br><br>
+                    <!-- Login Form Container -->
+                    <div class="login-div" class="ui-content">
+                        <br>
+                        <center style="font-size: 1.5vw;">
+                            <!-- Input Fields: Email and Password -->
+                            <p style="width: 30vw;">
+                                <input type="email" placeholder="Enter Email" id="user">
+                                <input type="password" placeholder="Enter Password" id="pwd">
+                            </p>
+                            <!-- Links for Creating Account and Forgot Password -->
+                            <table style="width: 30vw; border-collapse: collapse;">
+                                <tbody>
+                                    <tr>
+                                        <td><a href="#page4"> Create Account</a></td>
+                                        <td style="text-align: right; width: fit-content;"> <a href="#page5">Forgot Password?</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </center>
+                        <br>
+                        <!-- Login Button -->
+                        <center><a><button id="submit" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 25vw; letter-spacing:0.1vw; font-size: 1vw;">LOGIN</button></a></center>
+                        <!-- Login Info Message -->
+                        <p id="loginfo" style="text-align: center;"></p>
+                        <br>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <div data-role="footer" data-position="fixed" class="footer">
+                    <h2>FLEXWALLET ©</h2>
+                </div>
+            </div>
+             
+            <!-- Page 3: Main Page -->
+            <div data-role="page" id="page3">
+                <!-- Header with User Greeting, Profile, and Logout -->
+                <div data-role="header" class="header">
+                    <br>
+                    <br>
+                    <!-- User Greeting using fie=rstname generated from the email-->
+                    <h1><b class="logo" style="letter-spacing: 0.1vw;">HELLO, <span id="presentUser"></span><i>!</i></b></h1>
+                    <!-- User Profile -->
+                    <div id="user_profile">
+                        <a href="">
+                            <img src="img/profile.png" alt="profile" style="height: 2.5vw; width: 3vw;">
+                            <h5 style="margin-top: 0; margin-top:0; font-size: 0.7vw; color: rgb(241, 135, 5);">PROFILE</h5>  
+                        </a>
+                    </div>
+                    <!-- Logout Button -->
+                    <div class="logout">
+                        <a href="#" id="logoutButton">
+                            <h5 id="log" style="margin-top: 0; margin-top:0; font-size: 0.7vw; color: rgb(241, 135, 5);"> </h5>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+            
+                <!-- Main Content: Icons with links -->
+                <div data-role="main" class="ui-content">
+                    <br><br><br>
+                    <center>
+                        <table>
+                            <tbody>
+                                <tr> 
+                                    <!-- Currencies Icon -->
+                                    <td style="width: 17vw;" >
+                                        <Center class="imagepara">
+                                            <a href="#page8">
+                                                <img src="img/currency.png" alt="Banks" class="mainIcons">
+                                                <p class="iconLabel">CURRENCIES</p>
+                                            </a>
+                                        </Center>
+                                    </td>
+                                    <!-- Find ATM Icon -->
+                                    <td style="width: 17vw;">
+                                        <center class="imagepara">
+                                           <a href="#page9">
+                                                <img src="img/atm.jpg" alt="ATM" class="mainIcons" >
+                                                <P class="iconLabel">FIND NEARBY ATM</P>
+                                           </a>
+                                        </center>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- Transactions Icon -->
+                                    <td style="width: 17vw;">
+                                        <center class="imagepara">
+                                            <a href="#page7">
+                                                <img src="img/transactions.png" alt="Transactions" class="mainIcons">
+                                                <p class="iconLabel">TRANSACTIONS</p>
+                                            </a>
+                                        </center>
+                                    </td>
+                                    <!-- Wallets Icon -->
+                                    <td style="width: 17vw;">
+                                        <center class="imagepara">
+                                            <a href="#page6">
+                                                <img src="img/wallets.png" alt="Wallets" class="mainIcons">
+                                                <p class="iconLabel" >WALLETS</p>
+                                            </a>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+                <!-- footer -->
+                <div data-role="footer" data-position="fixed"  class="footer">
+                    <h2>FLEXWALLET ©</h2>
+                </div>
+            </div>
+            
+            <!-- Page 4: Register Account Page -->
+            <div data-role="page" id="page4">
+                <!-- Header with Logo -->
+                <div data-role="header" class="header">
+                    <br>
+                    <br>
+                    <!-- Flexwallet Logo -->
+                    <h1><b class="logo" style="letter-spacing: 0.1vw;">FLEXWALLET</b></h1>
+                    <hr>
+                </div>
+                
+                <!-- Main Content: Account Registration Form -->
+                <div data-role="main" class="ui-content">
+                    <br><br><br><br><br><br><br>
+                    <div class="login-div" class="ui-content">
+                        <br>
+                        <center>
+                            <!-- Account Registration Form Inputs -->
+                            <p style="width: 30vw; font-size:1.5vw;">
+                                <input type="text" placeholder="Enter Username *" id="new_user">
+                                <input type="password" placeholder="Enter Password *" id="new_pwd">
+                                <input  type="text" placeholder="Enter a security word (max 8 letters)*" id="new_security">
+                                <!-- Note on Required Fields -->
+                                <table style="width: 30vw; border-collapse: collapse; margin-top: -2%;">
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#page4" style="color: black; font-weight: normal;"> * is required</a></td>
+                                            <td style="text-align: right; width: fit-content;"> <a href="#page2">Login Page</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>   
+                        </center>
+                        <!-- Create Account Button -->
+                        <center><a><button id="createAcc" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 25vw; letter-spacing:0.1vw; font-size: 1vw;">CREATE ACCOUNT</button></a></center>
+                        <!-- Registration Info Message from js/database -->
+                        <p id="createinfo"></p>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div data-role="footer" data-position="fixed"  class="footer">
+                    <h2>FLEXWALLET ©</h2>
+                </div>
+            </div>
+
+            <!-- Page 5: Forgot Password Page -->
+            <div data-role="page" id="page5">
+                <!-- Header with Logo -->
+                <div data-role="header" class="header">
+                    <br>
+                    <br>
+                    <!-- Flexwallet Logo -->
+                    <h1><b class="logo" style="letter-spacing: 0.1vw;">FLEXWALLET</b></h1>
+                    <hr>
+                </div>
+                
+                <!-- Main Content: Forgot Password Form -->
+                <div data-role="main" class="ui-content">
+                    <br><br><br><br><br><br><br>
+                    <div class="login-div" class="ui-content">
+                        <br>
+                        <center>
+                            <!-- Forgot Password Form Inputs -->
+                            <p style="width: 30vw; font-size:1.5vw;">
+                                <input type="text" placeholder="Enter Username *" id="recovery_user" required>
+                                <input  type="text" placeholder="Enter Consumer Key *" id="recovery_security" required>
+                                <!-- Note on Required Fields and Link to Login Page -->
+                                <table style="width: 30vw; border-collapse: collapse; margin-top: -2%;">
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#page4" style="color: black; font-weight: normal;"> * is required</a></td>
+                                            <td style="text-align: right; width: fit-content;"> <a href="#page2">Login Page</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>   
+                        </center>
+                        <!-- Get Password Button -->
+                        <center><a><button id="getPassword" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 25vw; letter-spacing:0.1vw; font-size: 1vw;">GET PASSWORD</button></a></center>
+                        <!-- Display Recovered Password or display 'recovery email sent' -->
+                        <p id="showPassword"></p>
+                    </div>
+                </div>
+                
+                <!-- Footer -->
+                <div data-role="footer" data-position="fixed"  class="footer">
+                    <h2>FLEXWALLET ©</h2>
+                </div>
+            </div>
+
+
+            <!-- Page 6: Wallets Page -->
+            <div data-role="page" id="page6">
+                <!-- Header with Logo and Back Button -->
+                <div data-role="header" class="header">
+                    <br>
+                    <br>
+                    <!-- Flexwallet Logo -->
+                    <h1><b class="logo" style="letter-spacing: 0.1vw;">FLEXWALLET</b></h1>
+                    <!-- Back Button -->
+                    <div class="logout">
+                        <a href="#page3">
+                            <h5 style="margin-top: 0; margin-top:0; font-size: 0.7vw; color: rgb(241, 135, 5);">BACK</h5>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+                
+                <!-- Main Content: Wallet Details -->
+                <div data-role="main" class="ui-content">
+                    <center>
+                        <div id="account_details">
+                            <br><br><br><br>
+                            <!-- Title: Wallets -->
+                            <h4 style="background-color: #055024;; color:white;">WALLETS</h4>
+                            <!-- Table for Wallets -->
+                            <table id="account-table" class="divs">
+                                <thead>
+                                    <tr>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Wallets in different currencies -->
+                                    <tr>
+                                        <td id="acc1" class="waladd"> USD Wallet </td>
+                                        <td> <strong class="bal">$ 1000.00 </strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="acc2" class="waladd"> GBP Wallet </td>
+                                        <td> <strong class="bal">£ 9000.00</strong> </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="acc3" class="waladd"> NGN Wallet </td>
+                                        <td> <strong class="bal">₦ 3500.20</strong> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br><br><br>
+                            <!-- Button to Toggle wallets balance -->
+                            <button id="toggleButton" class="divs" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 25vw; letter-spacing:0.1vw; font-size: 1vw;">Hide/Show Balance</button>
+                        </div>
+                    </center>
+                </div>
+                
+                <!-- Footer -->
+                <div data-role="footer" data-position="fixed" class="footer">
+                    <h2>FLEXWALLET ©</h2>
+                </div>
+            </div>
+
+
+            <!-- Page 7: Transactions Page -->
+            <div data-role="page" id="page7">
+                <!-- Header with Logo and Back Button -->
+                <div data-role="header" class="header">
+                    <br>
+                    <br>
+                    <!-- Title: Transactions -->
+                    <h1><b class="logo" style="letter-spacing: 0.1vw;">TRANSACTIONS</b></h1>
+                    <!-- Back Button -->
+                    <div class="logout">
+                        <a href="#page3">
+                            <h5 style="margin-top: 0; margin-top:0; font-size: 0.7vw; color: rgb(241, 135, 5);">BACK</h5>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+                
+                <!-- Main Content: Transactions including Filters and Display -->
+                <div data-role="main" class="ui-content">
+                    <center>
+                        <!-- Table for Transaction -->
+                        <table id="transTable" style=" border: 0.1vw solid #055024; padding: 1vw;" >
+                            <tbody>
+                                <!-- Bank select input -->
+                                <tr>
+                                    <td style="text-align: left; width: 8vw; padding-left: 0.5vw;" >Bank</td>
+                                    <td> 
+                                        <a href="#page10">
+                                            <input placeholder="Select a Bank" type="text" id="selectBank"  style="text-align: center; font-weight: bold;">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <!-- Account select Dropdown -->
+                                <tr>
+                                    <td style="text-align: left; width: 8vw; padding-left: 0.5vw;">Account</td>
+                                    <td> 
+                                        <select name="dropdowns" id="selectAccount">
+                                            <option value="Select Account">Select Account</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <!-- Date Picker from jquery UI -->
+                                <tr>
+                                    <td style="text-align: left; width: 8vw; padding-left: 0.5vw;">Date</td>
+                                    <td> 
+                                        <input type='text' id='datepicker' placeholder='Select a date to filter' style="text-align: center; font-weight: bold;"> 
+                                    </td>
+                                </tr>
+                                <!-- option to send to email -->
+                                <tr>
+                                    <td style="text-align: left; width: 8vw; padding-left: 0.5vw;">
+                                        Send to E-mail
+                                    </td>
+                                    <td>
+                                         <input type="checkbox" id="sendToEmail" style="width:12px; height: 12px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- Buttons for Printing and Toggling Transactions -->
+                        <button id="showTransaction" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 20vw; letter-spacing:0.1vw; font-size: 0.8vw;"> PRINT TRANSACTIONS</button>
+                        <button id="toggleTransactions" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 20vw; letter-spacing:0.1vw; font-size: 0.8vw;"> HIDE/SHOW TRANSACTIONS</button>
+                        <br>
+                        <!-- Table for Displaying Transactions -->
+                        <table id="transtable">
+                            <thead id="tx-table">
+
+                            </thead>
+                            <tbody id="transactionsTable">
+                            </tbody>
+                        </table>
+                    </center> 
+                </div>
+                
+                <!-- Footer-->
+                <div data-role="footer" data-position="fixed" class="footer">
+                    <h2>FLEXWALLET ©</h2>
+                </div>   
+            </div>
+            <!-- Page 8: Currencies Page -->
+            <div data-role="page" id="page8">
+                <!-- Header with Logo and Back Button -->
+                <div data-role="header" class="header">
+                    <br>
+                    <br>
+                    <!-- Title: Currencies -->
+                    <h1><b class="logo" style="letter-spacing: 0.1vw;">CURRENCIES</b></h1>
+                    <!-- Back Button -->
+                    <div class="logout">
+                        <a href="#page3">
+                            <h5 style="margin-top: 0; margin-top:0; font-size: 0.7vw; color: rgb(241, 135, 5);">BACK</h5>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+                
+                <!-- Main Content: Currency Filters and Display -->
+                <div data-role="main" class="ui-content">
+                    <center>
+                        <!-- Table for Currency Filters -->
+                        <table id="transTable" style=" border: 0.1vw solid #055024;">
+                            <tbody>
+                                <!-- Bank Dropdown -->
+                                <tr>
+                                    <td style="text-align: center; width: 12vw;" >Bank</td>
+                                    <td> 
+                                        <select name="dropdowns" id="selectBank2">
+                                            <option value="Select Bank">Select Bank</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Buttons for Printing and Toggling Currencies -->
+                        <button id="printCurrencies" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 20vw; letter-spacing:0.1vw; font-size: 0.8vw;"> PRINT CURRENCIES</button>
+                        <button id="togglecurrencies" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 20vw; letter-spacing:0.1vw; font-size: 0.8vw;"> HIDE/SHOW CURRENCIES</button>
+                        <br>
+                        <!-- Table for Displaying Currencies -->
+                        <table style="text-align: center;">
+                            <tbody id="currenciesTable">
+                            </tbody>
+                        </table>
+                    </center> 
+                </div>
+                
+                <!-- Footer -->
+                <div data-role="footer" data-position="fixed" class="footer">
+                    <h2>FLEXWALLET ©</h2>
+                </div>
+            </div>
+
+            <!-- Page 9: Find ATM Page -->
+            <div data-role="page" id="page9">
+                <!-- Header with Logo and Back Button -->
+                <div data-role="header" class="header">
+                    <br>
+                    <br>
+                    <!-- Title: ATM -->
+                    <h1><b class="logo" style="letter-spacing: 0.1vw;">ATM</b></h1>
+                    <!-- Back Button -->
+                    <div class="logout">
+                        <a href="#page3">
+                            <h5 style="margin-top: 0; margin-top:0; font-size: 0.7vw; color: rgb(241, 135, 5);">BACK</h5>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+                
+                <!-- Main Content -->
+                <div data-role="main" class="ui-content">
+                    <center>
+                        <!-- Table for ATM -->
+                        <table id="getAtmTable" style=" border: 0.1vw solid #055024; padding: 1vw;" >
+                            <tbody>
+                                <!-- Bank select Dropdown -->
+                                <tr>
+                                    <td style="text-align: left; width: 8vw; padding-left: 0.5vw;" ><b>Bank</b></td>
+                                    <td> 
+                                        <select name="dropdowns" id="selectBank3">
+                                            <option value="Select Bank">Select Bank</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                              
+                                <!-- Find ATM in a city -->
+                                <tr>
+                                    <td style="text-align: left; width: 8vw; padding-left: 0.5vw;"><b>City</b></td>
+                                    <td> 
+                                        <input type='text' id='citySelect' placeholder='Select a city to filter' style="text-align: center; font-weight: bold;"> 
+                                    </td>
+                                </tr>
+                          
+                            </tbody>
+                        </table>
+                        
+                        <!-- Buttons for Printing and Toggling ATMs -->
+                        <button id="showATM" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 20vw; letter-spacing:0.1vw; font-size: 0.8vw;"> PRINT ATMs</button>
+                        <button id="toggleATM" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 20vw; letter-spacing:0.1vw; font-size: 0.8vw;"> HIDE/SHOW ATMs</button>
+                        <br>
+                        <!-- Table for Displaying ATMs -->
+                        <table style="text-align: center;" id="atmTable" >
+                            <thead id="atmTableHead">
+
+                            </thead>
+                            <tbody id="atmTableBody">
+                            </tbody>
+                        </table>
+                    </center> 
+                </div>
+                
+                <!-- Footer -->
+                <div data-role="footer" data-position="fixed" class="footer">
+                    <h2>FLEXWALLET ©</h2>
+                </div>
+            </div>
+
+            <!-- Page 10: Select Bank Page -->
+            <div data-role="page" id="page10">
+                <!-- Header with Logo and Back Button -->
+                <div data-role="header" class="header">
+                    <br>
+                    <br>
+                    <!-- Title: BAnks -->
+                    <h1><b class="logo" style="letter-spacing: 0.1vw;">BANKS</b></h1>
+                    <!-- Back Button -->
+                    <div class="logout">
+                        <a href="#page7">
+                            <h5 style="margin-top: 0; margin-top:0; font-size: 0.7vw; color: rgb(241, 135, 5);">BACK</h5>
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+                
+                <!-- Main Content -->
+                <div data-role="main" class="ui-content">
+                    <center>
+                        <!-- Table for ATM -->
+                        <table id="searchbankTable" style=" border: 0.1vw solid #055024; padding: 1vw;" >
+                            <tbody>
+                                <!-- Quick Search for bank -->
+                                <tr>
+                                    <td> 
+                                        <input type='text' id='searchValue' placeholder='Quick Search for Bank' style="text-align: center; font-weight: bold; width: 20vw;"> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- Buttons to search banks -->
+                        <button id="searchBank" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 20vw; letter-spacing:0.1vw; font-size: 0.8vw;"> SEARCH</button>
+                        <br>
+
+                        <!-- Table for Displaying BANKS -->
+                        <table style="text-align: center;" id="banksTable" >
+                            <tbody id="bankTableBody">
+                            </tbody>
+                        </table>
+                    </center> 
+                </div>
+                
+                <!-- Footer -->
+                <div data-role="footer" data-position="fixed" class="footer">
+                    <h2>FLEXWALLET ©</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- js link for js/index.js -->
+        <script src="js/index.js"></script>
+    
+    </body>
+</html>

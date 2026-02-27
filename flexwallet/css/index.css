@@ -1,0 +1,202 @@
+/* Reset default link highlight color */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* Transparent link selection */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+/* Header 1 */
+h1 {
+    font-size:2vw;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center; 
+}
+
+/* Logo(FLEXWALLET) styling */
+.logo {
+    font-size: 200%;
+    font-style: oblique;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #055024;
+    letter-spacing: 1vw;
+}
+
+/* Styling for page1-center */
+#page1-center {
+    font-size: 150%;
+    text-transform: none;
+    color: wheat;
+}
+
+/* Body */
+body {
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Page 1 */
+#page1 {
+    background-image:linear-gradient(to bottom, #ffffff 15%, #055024 99%);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styling for specific pages */
+#page3, #page7, #page8, #page9, #page10 {
+    background-color: #ffffff !important;
+}
+
+#page2, #page5, #page4, #page6 {
+    background-image:linear-gradient(to bottom, #ffffff 85%, #055024 99%) !important;
+    background-size: cover;
+    background-position: center;
+    height: fit-content;  
+}
+
+/* Footer */
+.footer {
+    background-color: #055024 !important; 
+    color: white !important; 
+    border: 0.1vw solid #055024 !important;
+}
+
+/* Header */
+.header {
+    background-image:linear-gradient(to bottom, #ffffff 100%, #055024 0%);
+    background-size: cover;
+    background-position: center;
+    background-color: #ffffff  !important;
+}
+
+/* Divs: reset all divs border*/
+div {
+    border: none;
+}
+
+/* Links decoration removed for all links*/
+a {
+    text-decoration: none;
+}
+
+/* Login Div */
+.login-div {
+    width: 38%;
+    position: absolute;
+    left: 32%;
+    font-style: oblique;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px !important; 
+    border: 0.1vw solid #055024 !important; 
+    font-size: 1.5vw;
+}
+
+/* Main Icons */
+.mainIcons {
+    height: 10vw;
+    width: 10vw;
+}
+
+/* Image  Hover */
+.imagepara:hover {
+    opacity: 0.5;
+    filter: brightness(100%);
+    font-weight: 600;
+}
+
+/* Image h */
+.imagepara {
+    border: 0.5vw solid #055024;
+    border-radius: 0.5vw;
+    margin: 0.3vw;
+}
+
+/* Icon/image Label */
+.iconLabel {
+    color: #055024;
+    font-weight: 600;
+    margin-top: 0;
+    width: fit-content;
+    font-size: 1.3vw;
+}
+
+/* User Profile */
+#user_profile {
+    width: 4vw; 
+    text-align: center; 
+    float: right; 
+    border: 0.1vw solid #055024;
+    position: absolute;
+    top: 0.5vw;
+    left: 95%;
+    height: 4.5vw;
+}
+
+/* .divs class */
+.divs {
+    border: 0.2vw solid #055024;
+    padding: 0.2vw;
+}
+
+/* Account Details */
+#account_details {
+    width: 30vw;
+}
+
+/* Wallet Address and Balance */
+.waladd, .bal {
+    padding: 10px;
+    border: 0.3px solid #09180d;
+    text-align: right;
+    text-align: right;
+}
+
+/* Logout */
+.logout {
+    width: 4vw; 
+    text-align: center; 
+    float: right; 
+    border: 0.1vw solid #055024;
+    position: absolute;
+    top: 1vw;
+    right: 95%;
+    height: 1.0vw;
+}
+
+/* Transaction Table */
+#transTable td {
+    width: 25vw;
+    font-weight: 800;   
+}
+
+/* Transaction table Cell Styling */
+#tx-table th, #transactionsTable td, #currenciesTable td, #transtablele th, #atmTableHead th, #atmTableBody td, #bankTableBody td {
+    border: 0.1vw solid #055024 !important;
+    padding: 8px !important; 
+}
+
+#transtable th{
+    text-align: center;
+}
+
+#bankTableBody a {
+    color: black !important;
+    font-weight: 400;
+}
+
+#bhead{
+    font-weight: bold;
+}
