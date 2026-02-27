@@ -168,7 +168,7 @@ a {
 .logout {
     width: auto; 
     text-align: center; 
-    float: right; 
+    float: left; 
     border: 0.1vw solid #055024;
     position: absolute;
     top: 1vw;
