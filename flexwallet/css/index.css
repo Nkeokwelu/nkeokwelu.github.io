@@ -166,14 +166,14 @@ a {
 
 /* Logout */
 .logout {
-    width: 4vw; 
+    width: auto; 
     text-align: center; 
     float: right; 
     border: 0.1vw solid #055024;
     position: absolute;
     top: 1vw;
     right: 95%;
-    height: 1.0vw;
+    height: auto;
 }
 
 /* Transaction Table */
