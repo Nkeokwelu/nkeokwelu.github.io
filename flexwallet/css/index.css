@@ -166,14 +166,20 @@ a {
 
 /* Logout */
 .logout {
-    width: auto; 
-    text-align: center; 
-    float: right; 
-    border: 0.1vw solid #055024;
     position: absolute;
-    top: 1vw;
-    right: 95%;
-    height: auto;
+    top: 1rem;       /* instead of 1vw */
+    right: 1rem;     /* so it stays inside the viewport */
+    padding: 0.4rem 0.8rem; /* space inside the box */
+    border: 2px solid #055024; /* thicker, visible on mobile */
+    border-radius: 5px;
+    background-color: #ffffff; /* optional for visibility */
+    text-align: center;
+}
+.logout a {
+    text-decoration: none;
+    color: rgb(241, 135, 5);
+    font-size: 1rem;  /* scalable on mobile */
+    font-weight: bold;
 }
 
 /* Transaction Table */
