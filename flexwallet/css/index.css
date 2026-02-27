@@ -34,7 +34,7 @@ h1 {
 
 /* Styling for page1-center */
 #page1-center {
-    font-size: 100%;
+    font-size: 120%;
     text-transform: none;
     color: wheat;
 }
@@ -94,7 +94,7 @@ a {
 
 /* Login Div */
 .login-div {
-    width: 60%;
+    width: 50%;
     margin: 40px auto;
     position: relative;
     font-size: 1rem;
@@ -107,8 +107,7 @@ a {
 /* Main Icons */
 .mainIcons {
     width: 80px;
-    max-width: 25%;
-    height: auto;
+    height: 80px;
 }
 
 /* Image  Hover */
