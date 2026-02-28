@@ -172,8 +172,12 @@ a {
     border: 0.1vw solid #055024;
     position: absolute;
     top: 1vw;
-    right: 95%;
+    right: 90%;
     height: auto;
+}
+
+.logout a {
+    color: rgb(241, 135, 5);
 }
 
 /* Transaction Table */
