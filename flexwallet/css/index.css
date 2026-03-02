@@ -30,6 +30,7 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #055024;
     letter-spacing: 4px;
+    width: fit-content;
 }
 
 /* Styling for page1-center */
