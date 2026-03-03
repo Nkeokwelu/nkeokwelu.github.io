@@ -45,35 +45,33 @@
             </div>
 
 
-            <!-- Page 2: Login Page -->
+<!-- Page 2: Login Page -->
             <div data-role="page" id="page2">
-                <!-- Header with Logo -->
+                
+                 <!-- Header with Logo -->
                 <div data-role="header" class="header">
-                    <br>
-                    <br>
-                    <!-- FLEXWALLET Logo -->
-                    <h1><b class="logo" style="letter-spacing: 0.1vw;">FLEXWALLET</b></h1>
-                    <hr>
+                    <div class="header-center">
+                       <p class="logo">FLEXWALLET</p>
+                    </div>
                 </div>
+                <hr>
             
                 <!-- Main Content: Login Form -->
                 <div data-role="main" class="ui-content">
-                    <br><br><br><br><br><br><br>
                     <!-- Login Form Container -->
                     <div class="login-div" class="ui-content">
-                        <br>
-                        <center style="font-size: 1.5vw;">
+                        <center>
                             <!-- Input Fields: Email and Password -->
-                            <p style="width: 60%; max-width: 400px;">
+                            <p class="input_p">
                                 <input type="email" placeholder="Enter Email" id="user">
                                 <input type="password" placeholder="Enter Password" id="pwd">
                             </p>
                             <!-- Links for Creating Account and Forgot Password -->
-                            <table style="width: 30vw; border-collapse: collapse;">
+                            <table>
                                 <tbody>
                                     <tr>
                                         <td><a href="#page4"> Create Account</a></td>
-                                        <td style="text-align: right; width: fit-content;"> <a href="#page5">Forgot Password?</a></td>
+                                        <td style="text-align: right"> <a href="#page5">Forgot Password?</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -97,33 +95,31 @@
                 </div>
             </div>
              
-            <!-- Page 3: Main Page -->
+<!-- Page 3: Main Page -->
             <div data-role="page" id="page3">
-                <!-- Header with User Greeting, Profile, and Logout -->
                 <div data-role="header" class="header">
-                    <br>
-                    <br>
-                    <!-- User Greeting using firstname generated from the email-->
-                    <h1><b class="logo" style="letter-spacing: 0.1vw;">Hi, <span id="presentUser"></span><i>!</i></b></h1>
-                    <!-- User Profile -->
-                    <div id="user_profile">
-                        <a href="">
-                            <img src="img/profile.png" alt="profile" style="height: 2.5vw; width: 3vw;">
-                            <h5 style="margin-top: 0; margin-top:0; font-size: 0.7vw; color: rgb(241, 135, 5);">PROFILE</h5>  
-                        </a>
-                    </div>
-                    <!-- Logout Button -->
                     <div class="logout">
                         <a href="#" id="logoutButton">
-                            <span id="log" style="color: rgb(241, 135, 5);"> </span>
+                            <span id="log">LOGOUT</span>
                         </a>
                     </div>
-                    <hr>
+
+                    <div class="header-center">
+                        <p class="logo">Hi, <span id="presentUser"></span>!</p>
+                    </div>
+
+                    <div class="header-right">
+                        <div id="user_profile">
+                            <img src="img/profile.png" alt="profile">
+                            <span>PROFILE</span>
+                        </div>
+                    </div>
                 </div>
-            
+                <hr>
+
+
                 <!-- Main Content: Icons with links -->
                 <div data-role="main" class="ui-content">
-                    <br><br><br>
                     <center>
                         <table>
                             <tbody>
@@ -177,20 +173,17 @@
                 </div>
             </div>
             
-            <!-- Page 4: Register Account Page -->
+<!-- Page 4: Register Account Page -->
             <div data-role="page" id="page4">
-                <!-- Header with Logo -->
+                 <!-- Header with Logo -->
                 <div data-role="header" class="header">
-                    <br>
-                    <br>
-                    <!-- Flexwallet Logo -->
-                    <h1><b class="logo" style="letter-spacing: 0.1vw;">FLEXWALLET</b></h1>
-                    <hr>
+                    <div class="header-center">
+                       <p class="logo">FLEXWALLET</p>
+                    </div>
                 </div>
-                
+                <hr>
                 <!-- Main Content: Account Registration Form -->
                 <div data-role="main" class="ui-content">
-                    <br><br><br><br><br><br><br>
                     <div class="login-div" class="ui-content">
                         <br>
                         <center>
@@ -223,16 +216,15 @@
                 </div>
             </div>
 
-            <!-- Page 5: Forgot Password Page -->
+<!-- Page 5: Forgot Password Page -->
             <div data-role="page" id="page5">
-                <!-- Header with Logo -->
+                 <!-- Header with Logo -->
                 <div data-role="header" class="header">
-                    <br>
-                    <br>
-                    <!-- Flexwallet Logo -->
-                    <h1><b class="logo" style="letter-spacing: 0.1vw;">FLEXWALLET</b></h1>
-                    <hr>
+                    <div class="header-center">
+                       <p class="logo">FLEXWALLET</p>
+                    </div>
                 </div>
+                <hr>
                 
                 <!-- Main Content: Forgot Password Form -->
                 <div data-role="main" class="ui-content">
@@ -273,34 +265,24 @@
             <div data-role="page" id="page6">
                 <!-- Header with Logo and Back Button -->
                 <div data-role="header" class="header">
-                    <br>
-                    <br>
-                    <!-- Flexwallet Logo -->
-                    <h1><b class="logo" style="letter-spacing: 0.1vw;">FLEXWALLET</b></h1>
-
-                    <!-- Back Button -->
                     <div class="logout">
-                        <a href="#page3">
-                            BACK
+                        <a href="#page3" id="logoutButton">
+                            <span id="log" >BACK</span>
                         </a>
                     </div>
-                    <hr>
+
+                    <div class="header-center">
+                        <p class="logo">WALLETS</p>
+                    </div>
                 </div>
+                <hr>
                 
                 <!-- Main Content: Wallet Details -->
-                <div data-role="main" class="ui-content">
+                <div data-role="main" class="ui-content" ">
                     <center>
                         <div id="account_details">
-                            <br><br><br><br>
-                            <!-- Title: Wallets -->
-                            <h4 style="background-color: #055024;; color:white;">WALLETS</h4>
                             <!-- Table for Wallets -->
                             <table id="account-table" class="divs">
-                                <thead>
-                                    <tr>
-                                        
-                                    </tr>
-                                </thead>
                                 <tbody>
                                     <!-- Wallets in different currencies -->
                                     <tr>
@@ -319,7 +301,7 @@
                             </table>
                             <br><br><br>
                             <!-- Button to Toggle wallets balance -->
-                            <button id="toggleButton" class="divs" style="background-color: rgb(241, 135, 5); color: aliceblue; width: auto; padding: 0.8em 1.2em; letter-spacing:0.05em; font-size: 1rem;">Hide/Show Balance</button>
+                            <button id="toggleButton">Hide/Show Balance</button>
                         </div>
                     </center>
                 </div>
@@ -333,20 +315,19 @@
 
             <!-- Page 7: Transactions Page -->
             <div data-role="page" id="page7">
-                <!-- Header with Logo and Back Button -->
-                <div data-role="header" class="header">
-                    <br>
-                    <br>
-                    <!-- Title: Transactions -->
-                    <h1><b class="logo" style="letter-spacing: 0.1vw;">TRANSACTIONS</b></h1>
-                    <!-- Back Button -->
+                 <!-- Header with Logo and Back Button -->
+                 <div data-role="header" class="header">
                     <div class="logout">
-                        <a href="#page3">
-                            BACK
+                        <a href="#page3" id="logoutButton">
+                            <span id="log">BACK</span>
                         </a>
                     </div>
-                    <hr>
+
+                    <div class="header-center">
+                        <p class="logo">TRANSACTIONS</p>
+                    </div>
                 </div>
+                <hr>
                 
                 <!-- Main Content: Transactions including Filters and Display -->
                 <div data-role="main" class="ui-content">
@@ -392,8 +373,8 @@
                         </table>
                         
                         <!-- Buttons for Printing and Toggling Transactions -->
-                        <button id="showTransaction" style="background-color: rgb(241, 135, 5); color: aliceblue; width: auto; padding: 0.8em 1.2em; letter-spacing:0.05em; font-size: 1rem;"> PRINT TRANSACTIONS</button>
-                        <button id="toggleTransactions" style="background-color: rgb(241, 135, 5); color: aliceblue; width: auto; padding: 0.8em 1.2em; letter-spacing:0.05em; font-size: 1rem;"> HIDE/SHOW TRANSACTIONS</button>
+                        <button id="showTransaction"> PRINT TRANSACTIONS</button>
+                        <button id="toggleTransactions" > HIDE/SHOW TRANSACTIONS</button>
                         <br>
                         <!-- Table for Displaying Transactions -->
                         <table id="transtable">
@@ -415,20 +396,19 @@
 
             <!-- Page 8: Currencies Page -->
             <div data-role="page" id="page8">
-                <!-- Header with Logo and Back Button -->
+                 <!-- Header with Logo and Back Button -->
                 <div data-role="header" class="header">
-                    <br>
-                    <br>
-                    <!-- Title: Currencies -->
-                    <h1><b class="logo" style="letter-spacing: 0.1vw;">CURRENCIES</b></h1>
-                    <!-- Back Button -->
                     <div class="logout">
-                        <a href="#page3">
-                            BACK
+                        <a href="#page3" id="logoutButton">
+                            <span id="log">BACK</span>
                         </a>
                     </div>
-                    <hr>
+
+                    <div class="header-center">
+                        <p class="logo">CURRENCIES</p>
+                    </div>
                 </div>
+                <hr>
                 
                 <!-- Main Content: Currency Filters and Display -->
                 <div data-role="main" class="ui-content">
@@ -448,8 +428,8 @@
                             </tbody>
                         </table>
                         <!-- Buttons for Printing and Toggling Currencies -->
-                        <button id="printCurrencies" style="background-color: rgb(241, 135, 5); color: aliceblue; width: auto; padding: 0.8em 1.2em; letter-spacing:0.05em; font-size: 1rem;"> PRINT CURRENCIES</button>
-                        <button id="togglecurrencies" style="background-color: rgb(241, 135, 5); color: aliceblue; width: auto; padding: 0.8em 1.2em; letter-spacing:0.05em; font-size: 1rem;"> HIDE/SHOW CURRENCIES</button>
+                        <button id="printCurrencies"> PRINT CURRENCIES</button>
+                        <button id="togglecurrencies" > HIDE/SHOW CURRENCIES</button>
                         <br>
                         <!-- Table for Displaying Currencies -->
                         <table style="text-align: center;">
@@ -468,19 +448,18 @@
             <!-- Page 9: Find ATM Page -->
             <div data-role="page" id="page9">
                 <!-- Header with Logo and Back Button -->
-                <div data-role="header" class="header">
-                    <br>
-                    <br>
-                    <!-- Title: ATM -->
-                    <h1><b class="logo" style="letter-spacing: 0.1vw;">ATM</b></h1>
-                    <!-- Back Button -->
+              <div data-role="header" class="header">
                     <div class="logout">
-                        <a href="#page3">
-                            BACK
+                        <a href="#page3" id="logoutButton">
+                            <span id="log">BACK</span>
                         </a>
                     </div>
-                    <hr>
+
+                    <div class="header-center">
+                        <p class="logo">ATM LOCATIONS</p>
+                    </div>
                 </div>
+                <hr>
                 
                 <!-- Main Content -->
                 <div data-role="main" class="ui-content">
@@ -510,8 +489,8 @@
                         </table>
                         
                         <!-- Buttons for Printing and Toggling ATMs -->
-                        <button id="showATM" style="background-color: rgb(241, 135, 5); color: aliceblue; width: auto; padding: 0.8em 1.2em; letter-spacing:0.05em; font-size: 1rem;"> PRINT ATMs</button>
-                        <button id="toggleATM" style="background-color: rgb(241, 135, 5); color: aliceblue; width: auto; padding: 0.8em 1.2em; letter-spacing:0.05em; font-size: 1rem;"> HIDE/SHOW ATMs</button>
+                        <button id="showATM"> PRINT ATMs</button>
+                        <button id="toggleATM"> HIDE/SHOW ATMs</button>
                         <br>
                         <!-- Table for Displaying ATMs -->
                         <table style="text-align: center;" id="atmTable" >
@@ -532,20 +511,19 @@
 
             <!-- Page 10: Select Bank Page -->
             <div data-role="page" id="page10">
-                <!-- Header with Logo and Back Button -->
+                 <!-- Header with Logo and Back Button -->
                 <div data-role="header" class="header">
-                    <br>
-                    <br>
-                    <!-- Title: BAnks -->
-                    <h1><b class="logo" style="letter-spacing: 0.1vw;">BANKS</b></h1>
-                    <!-- Back Button -->
                     <div class="logout">
-                        <a href="#page7">
-                            <h5 style="margin-top: 0; margin-top:0; font-size: 0.7vw; color: rgb(241, 135, 5);">BACK</h5>
+                        <a href="#page3" id="logoutButton">
+                            <span id="log">BACK</span>
                         </a>
                     </div>
-                    <hr>
+
+                    <div class="header-center">
+                        <p class="logo">BANKS</p>
+                    </div>
                 </div>
+                <hr>
                 
                 <!-- Main Content -->
                 <div data-role="main" class="ui-content">
