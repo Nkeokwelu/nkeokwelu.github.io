@@ -78,15 +78,25 @@
                         </center>
                         <br>
                         <!-- Login Button -->
-                        <center><a><button id="submit" style="background-color: rgb(241, 135, 5); color: aliceblue; width: 25vw; letter-spacing:0.1vw; font-size: 1vw;">LOGIN</button></a></center>
+                        <center>
+                            <a>
+                                <button id="submit">LOGIN</button>
+                            </a>
+                        </center>
                         <!-- Login Info Message -->
-                        <p id="loginfo" style="text-align: center;"></p>
-                        <br>                    
+                        <p id="loginfo" style="text-align: center;"></p>                  
                     </div>
-                    <div class="demo_div">
-                        <h3> Demo Account</h3>
-                        <h4> Email: nathan.fr.29@example.com</h4>
-                        <h4> Password: bde179</h4>
+                    <div class="demo-wrapper">
+                        <button id="toggleDemo" class="demo-toggle">
+                            Show Demo Account
+                        </button>
+
+                        <div id="demoPanel" class="demo-panel">
+                            <span class="close-demo">&times;</span>
+                            <p>Email: nathan.fr.29@example.com</p>
+                            <p>Password: bde179</p>
+                            <button id="useDemo">Use Demo</button>
+                        </div>
                     </div>
                 </div>
                 <!-- Footer -->
@@ -99,7 +109,7 @@
             <div data-role="page" id="page3">
                 <div data-role="header" class="header">
                     <div class="logout">
-                        <a href="#" id="logoutButton">
+                        <a href="#" class="logoutButton" id="logoutButton">
                             <span id="log">LOGOUT</span>
                         </a>
                     </div>
@@ -266,7 +276,7 @@
                 <!-- Header with Logo and Back Button -->
                 <div data-role="header" class="header">
                     <div class="logout">
-                        <a href="#page3" id="logoutButton">
+                        <a href="#page3" class="logoutButton">
                             <span id="log" >BACK</span>
                         </a>
                     </div>
@@ -318,7 +328,7 @@
                  <!-- Header with Logo and Back Button -->
                  <div data-role="header" class="header">
                     <div class="logout">
-                        <a href="#page3" id="logoutButton">
+                        <a href="#page3" class="logoutButton">
                             <span id="log">BACK</span>
                         </a>
                     </div>
@@ -377,13 +387,12 @@
                         <button id="toggleTransactions" > HIDE/SHOW TRANSACTIONS</button>
                         <br>
                         <!-- Table for Displaying Transactions -->
-                        <table id="transtable">
-                            <thead id="tx-table">
-
-                            </thead>
-                            <tbody id="transactionsTable">
-                            </tbody>
-                        </table>
+                       <div class="table-wrapper">
+                            <table id="transtable">
+                                <thead id="tx-table"></thead>
+                                <tbody id="transactionsTable"></tbody>
+                            </table>
+                        </div>
                     </center> 
                 </div>
                 
@@ -399,7 +408,7 @@
                  <!-- Header with Logo and Back Button -->
                 <div data-role="header" class="header">
                     <div class="logout">
-                        <a href="#page3" id="logoutButton">
+                        <a href="#page3" class="logoutButton">
                             <span id="log">BACK</span>
                         </a>
                     </div>
@@ -450,7 +459,7 @@
                 <!-- Header with Logo and Back Button -->
               <div data-role="header" class="header">
                     <div class="logout">
-                        <a href="#page3" id="logoutButton">
+                        <a href="#page3" class="logoutButton">
                             <span id="log">BACK</span>
                         </a>
                     </div>
@@ -514,7 +523,7 @@
                  <!-- Header with Logo and Back Button -->
                 <div data-role="header" class="header">
                     <div class="logout">
-                        <a href="#page3" id="logoutButton">
+                        <a href="#page3" class="logoutButton">
                             <span id="log">BACK</span>
                         </a>
                     </div>
