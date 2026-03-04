@@ -1,19 +1,53 @@
-/* Reset default link highlight color */
+/* =========================================================
+   GLOBAL / RESET STYLES
+   ========================================================= */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* Transparent link selection */
 }
 
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+body {
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+div {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Responsive layout for landscape screens */
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
     .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
+        background-position: left center;
+        padding: 75px 0 75px 170px;
+        margin: -90px 0 0 -198px;
     }
 }
 
-/* Header 1 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .iconLabel {
+        font-size: 0.9rem;
+    }
+}
+
+/* =========================================================
+   HEADINGS & LOGO
+   ========================================================= */
 h1 {
     font-size:1.8rem;
     font-weight:normal;
@@ -23,128 +57,127 @@ h1 {
     text-align:center; 
 }
 
-/* Logo(FLEXWALLET) styling */
 .logo {
-    font-size: 1.5vw;
+    font-size: 2.1vw;
     font-style: oblique;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #055024;
     letter-spacing: 4px;
     width: 100%;
     text-align: center;
-    margin: 0;
     font-weight: 600;
-    letter-spacing: 0.05em;
 }
 
-/* Styling for page1-center */
+/* =========================================================
+   PAGE 1: WELCOME
+   ========================================================= */
+#page1 {
+    background-image: linear-gradient(to bottom, #ffffff 15%, #055024 99%);
+    background-size: cover;
+    background-position: center;
+}
+
 #page1-center {
     font-size: 120%;
     text-transform: none;
     color: wheat;
 }
 
-/* Body */
-body {
-    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    width:100%;
-}
-
-/* Page 1 */
-#page1 {
-    background-image:linear-gradient(to bottom, #ffffff 15%, #055024 99%);
-    background-size: cover;
-    background-position: center;
-}
-
-/* Styling for specific pages */
-#page3, #page7, #page8, #page9, #page10 {
-    background-color: #ffffff !important;
-}
-
-#page2, #page5, #page4, #page6 {
-    background-image:linear-gradient(to bottom, #ffffff 85%, #055024 99%) !important;
+/* =========================================================
+   PAGES 2,4,5,6: LOGIN, REGISTER, FORGOT PASSWORD, WALLETS
+   ========================================================= */
+#page2, #page4, #page5, #page6 {
+    background-image: linear-gradient(to bottom, #ffffff 85%, #055024 99%) !important;
     background-size: cover;
     background-position: center;
     height: fit-content;  
 }
 
-/* Footer */
-.footer {
-    background-color: #055024 !important; 
-    color: white !important; 
-    border: 0.1vw solid #055024 !important;
-}
-
-/* Header */
-.header {
-    background-position: center;
-    background-color: #ffffff  !important;
-    display: flex;
-    align-items: center;        /* vertically center */
-    height: fit-content;
-    margin-top: 1rem;
-}
-
-/* Center section: Greeting */
-.header-center {
-    flex: 2;                    /* more space to center text */
-    margin-left: 4rem;
-    width: fit-content;
-}
-
-/* Divs: reset all divs border*/
-div {
-    border: none;
-}
-
-/* Links decoration removed for all links*/
-a {
-    text-decoration: none;
-}
-
-/* Login Div */
+/* Login / Form Containers */
 .login-div {
     width: 50%;
-    margin: 40px auto;
+    margin: 10px auto;
     position: relative;
     font-size: 1.2vw;
-    font-style: oblique;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 10px !important; 
     border: 1px solid #055024 !important; 
-    padding-top: 1.5rem;
+}
+
+.login-div input {
+    font-size: 140%;
 }
 
 .login-div td {
     width: fit-content;    
     margin: 0 auto;    
-    font-size: 1.2vw;
+    font-size: 120%;
 }
 
-.login-div table{
-    width:40vw;
+.login-div table {
+    width: 40vw;
 }
 
-.login-div center{
+.login-div center {
     font-size: 1.5vw;
 }
 
-.input_p{
+.input_p {
     width: 150vw; 
     max-width: 40vw;
 }
 
-.demo_div{
-    position: absolute
+/* Demo account panel */
+.demo-wrapper {
+    margin-top: 15px;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
 }
 
-.demo_div h3, .demo_div h4{
-    font-size: 1rem;
-    margin: none;
+.demo-toggle {
+    border: 0.2vw solid black;
+    font-size: 70%;
+    width: fit-content !important;
+    display: inline-block;
+}
+
+.demo-panel {
+    display: none;
+    margin-top: 10px;
+    padding: 15px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100%;
+}
+
+.close-demo {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#useDemo {
+    margin-top: 10px;
+    background-color: rgb(241, 135, 5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+/* =========================================================
+   PAGES 3,7,8,9,10: DASHBOARD / TRANSACTIONS / CURRENCIES / ATM / BANKS
+   ========================================================= */
+#page3, #page7, #page8, #page9, #page10 {
+    background-color: #ffffff !important;
 }
 
 /* Main Icons */
@@ -153,21 +186,18 @@ a {
     height: 80px;
 }
 
-/* Image  Hover */
-.imagepara:hover {
-    opacity: 0.5;
-    filter: brightness(100%);
-    font-weight: 600;
-}
-
-/* Image h */
 .imagepara {
     border: 0.5vw solid #055024;
     border-radius: 0.5vw;
     margin: 0.3vw;
 }
 
-/* Icon/image Label */
+.imagepara:hover {
+    opacity: 0.5;
+    filter: brightness(100%);
+    font-weight: 600;
+}
+
 .iconLabel {
     color: #055024;
     font-weight: 600;
@@ -176,14 +206,109 @@ a {
     font-size: 1.3vw;
 }
 
+/* Wallets Table */
+.divs {
+    border: 0.2vw solid #055024;
+    width: fit-content;
+    position: center;
+}
+
+#account-table td {
+    width: auto;
+}
+
+.waladd {
+    border: 0.2vw solid #055024;
+}
+
+.bal {
+    padding: 1vw;
+    text-align: right;
+    width: fit-content;
+}
+
+/* Transaction & other tables */
+#transTable td {
+    width: fit-content;
+    font-weight: 800;   
+}
+
+#tx-table th, #transactionsTable td, #currenciesTable td, #transtablele th, #atmTableHead th, #atmTableBody td, #bankTableBody td {
+    border: 1px solid #055024 !important;
+    padding: 8px !important; 
+}
+
+#transtable th {
+    text-align: center;
+}
+
+/* Make wrapper scrollable horizontally on small screens */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+
+/* Force table to shrink to wrapper */
+.table-wrapper table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed; /* key: distributes columns evenly and prevents overflow */
+    border-collapse: collapse;
+}
+
+/* Optional: make cells wrap text instead of stretching table */
+.table-wrapper td,
+.table-wrapper th {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; 
+}
+
+#bankTableBody a {
+    color: black !important;
+    font-weight: 400;
+}
+
+#bhead {
+    font-weight: bold;
+}
+
+/* =========================================================
+   HEADERS
+   ========================================================= */
+.header {
+    background-position: center;
+    background-color: #ffffff !important;
+    display: flex;
+    align-items: center;  /* vertically center */
+    height: fit-content;
+    margin-top: 1rem;
+}
+
+.header-center {
+    flex: 2;   /* center space */
+    width: fit-content;
+}
+
+#page3 .logo {
+    margin-left: 2.5rem;
+}
+
+/* .header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+} */
+
 /* User Profile */
 #user_profile {
     border: 0.1vw solid #055024;
     margin-right: 0.5rem;
     display: flex;
-    flex-direction: column;  /* stack items vertically */
+    flex-direction: column;
     align-items: center;
-    width: auto
+    width: auto;
 }
 
 #user_profile img {
@@ -197,40 +322,16 @@ a {
     padding-bottom: 0.2vw;
 }
 
-/* .divs class */
-.divs {
-    border: 0.2vw solid #055024;
-    width: fit-content;
-    position: center;
-}
-
-#account-table td{
-    width: auto;
-    
-}
-
-/* Wallet Address and Balance */
-.bal {
-    padding: 1vw;
-    text-align: right;
-    width: fit-content;
-}
-
-.waladd{
-    border: 0.2vw solid #055024;
-}
-/* Logout */
+/* Logout Button */
 .logout {
     border: 0.1vw solid #055024;
-    position: absolute;
-    top: 1vw;
-    flex: 1;                    /* take up space on left */
+    flex: 1;
     text-align: left;
     margin-left: 0.5rem;
-    
+    position: absolute;
 }
 
-#log{
+#log {
     color: rgb(241, 135, 5);
 }
 
@@ -238,59 +339,60 @@ a {
     color: rgb(241, 135, 5);
 }
 
-/* Transaction Table */
-#transTable td {
-    width: 25vw;
-    font-weight: 800;   
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+    background-color: #055024 !important; 
+    color: white !important; 
+    border: 0.1vw solid #055024 !important;
 }
 
-/* Transaction table Cell Styling */
-#tx-table th, #transactionsTable td, #currenciesTable td, #transtablele th, #atmTableHead th, #atmTableBody td, #bankTableBody td {
-    border: 1px solid #055024 !important;
-    padding: 8px !important; 
-}
-
-#transtable th{
-    text-align: center;
-}
-
-#bankTableBody a {
-    color: black !important;
-    font-weight: 400;
-}
-
-#bhead{
-    font-weight: bold;
-}
-
-#account_details{
-    margin-top: 2vw;
-}
-
-#showTransaction, #toggleTransactions, #toggleButton, #printCurrencies, #togglecurrencies, #toggleATM, #showATM{
-    background-color: rgb(241, 135, 5); color: aliceblue; 
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+#submit,
+#showTransaction,
+#toggleTransactions,
+#toggleButton,
+#printCurrencies,
+#togglecurrencies,
+#toggleATM,
+#showATM {
+    background-color: rgb(241, 135, 5);
+    color: aliceblue; 
     width: fit-content;
-    letter-spacing:0.05em; 
+    letter-spacing: 0.05em; 
     font-size: 1rem;
 }
 
-.ui-content{
+/* Login button */
+#submit {
+    width: 20vw; 
+    letter-spacing: 0.3vw; 
+    font-size: 85%;
+}
+
+/* =========================================================
+   DEMO DIV
+   ========================================================= */
+.demo_div {
+    position: absolute;
+}
+
+.demo_div h3,
+.demo_div h4 {
+    font-size: 1rem;
+    margin: none;
+}
+
+/* =========================================================
+   MISC / UI CONTENT
+   ========================================================= */
+.ui-content {
     margin-top: 5rem;
 }
 
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 1.4rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-        letter-spacing: 2px;
-    }
-
-    .iconLabel {
-        font-size: 0.9rem;
-    }
-
+#account_details {
+    margin-top: 2vw;
 }
