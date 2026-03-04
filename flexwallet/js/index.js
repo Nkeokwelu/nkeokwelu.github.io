@@ -439,3 +439,20 @@ $("#logoutButton").click(function() {
 if (LogStatus === 'offline') {
     document.getElementById("log").innerHTML = "LOG ON";
 };
+// Toggle demo panel
+document.getElementById("toggleDemo").onclick = function() {
+    let panel = document.getElementById("demoPanel");
+    panel.style.display = panel.style.display === "block" ? "none" : "block";
+};
+
+// Close demo panel
+document.querySelector(".close-demo").onclick = function() {
+    document.getElementById("demoPanel").style.display = "none";
+};
+
+// Autofill inputs
+document.getElementById("useDemo").onclick = function() {
+    document.getElementById("user").value = "nathan.fr.29@example.com";
+    document.getElementById("pwd").value = "bde179";
+    document.getElementById("demoPanel").style.display = "none";
+};
