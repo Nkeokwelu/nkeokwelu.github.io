@@ -1,285 +1,427 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Arinze Nkeokwelu | Energy Data Analyst">
-    <meta property="og:description" content="Portfolio of Arinze Nkeokwelu – forecasts, analytics, fintech, energy market insights, and electrical engineering.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Arinze Nkeokwelu - Energy Data Analyst" />
     <title>Arinze Nkeokwelu | Energy Data Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="portfoliostyles.css">
-</head>
+    <link rel="icon" type="image/svg+xml" href="Assets/favicon.svg">
+    <!-- Favicon -->
+    <link rel="icon" href="Assets/favicon.png" type="image/png" />
 
-<body>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-<header>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Profile image (replace profile.jpg with your real image file) -->
-    <img src="images/profile.jpg" alt="Arinze Nkeokwelu" class="profile-pic">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="https://nkeokwelu.github.io/" target="_blank" class="nav__logo">
+          <span>Arinze Nkeokwelu</span>
+        </a>
 
-    <!-- Name -->
-    <h1>Arinze Nkeokwelu</h1>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">Portfolio</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
 
-    <!-- Short professional title -->
-    <p class="subtitle">(Energy Data Analyst, Electrical Engineer)</p>
-
-    <!-- Short intro statement -->
-    <p class="intro">
-        Transforming complex energy datasets into strategic insights. 
-        Specialised in forecasting, optimisation, and sustainability analytics.
-    </p>
-
-    <!-- Scroll button to projects section -->
-    <button class="btn" onclick="scrollToSection('projects')">
-        View My Work
-    </button>
-
-</header>
-
-
-<!-- ================= ABOUT SECTION ================= -->
-<section id="about">
-
-    <h2 class="section-title">About Me</h2>
-
-    <!-- Short professional summary -->
-    <p>
-        I analyse energy markets, consumption trends, and renewable performance using Python, SQL, and data visualisation tools.
-        My focus is on turning energy data into actionable intelligence for optimisation, forecasting, and sustainability.
-    </p>
-
-</section>
-
-
-<!-- ================= IMPACT / STATS SECTION ================= -->
-<section id="stats">
-
-    <h2 class="section-title">Impact</h2>
-
-    <div class="stats">
-
-        <!-- Each stat uses data-target for animation -->
-        <div>
-            <div class="stat" data-target="15">0</div>
-            <p>Forecasting Models Built</p>
+          <button class="nav__close" id="nav-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
         </div>
 
-        <div>
-            <div class="stat" data-target="30">0</div>
-            <p>Energy Dashboards Deployed</p>
+        <div class="nav__actions">
+          <!-- Call Me -->
+          <a href="tel:+2348109992453" class="nav__call" aria-label="Call me">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+
+          <!-- Theme Toggle -->
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <i data-lucide="sun" class="theme-toggle__icon theme-toggle__icon--sun"></i>
+            <i data-lucide="moon" class="theme-toggle__icon theme-toggle__icon--moon"></i>
+          </button>
+<!-- 
+          <a href="resume.pdf" target="_blank" class="btn btn--primary">
+            Download CV
+          </a> -->
+          <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <!-- Floating geometric shapes -->
+        <div class="hero__shapes">
+          <div class="hero__shape hero__shape--1"></div>
+          <div class="hero__shape hero__shape--2"></div>
+          <div class="hero__shape hero__shape--3"></div>
         </div>
 
-        <div>
-            <div class="stat" data-target="100">0</div>
-            <p>Million kWh Analysed</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= PROJECTS SECTION ================= -->
-<section id="projects">
-
-    <h2 class="section-title">Projects</h2>
-
-    <div class="grid">
-
-        <!-- Project 1 -->
-        <div class="card">
-            <h3>Work in Progress: Live BESS Analytics Dashboard</h3>
-            <p>Objectives:</p>
-            <ul>
-                <li>Forecast Day-Ahead Prices – Predict electricity prices for the next day.</li>
-                <li>Optimise Battery Dispatch – Schedule a 50 MWh battery to maximise revenue.</li>
-                <li>Produce Revenue Curve – Visualise potential earnings.</li>
-                <li>Compare Against Market Behaviour – Assess performance versus actual outcomes.</li>
-            </ul>
+        <div class="hero__container container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Arinze Nkeokwelu:
+              <span class="hero__title-highlight">
+                <span class="typing-text"></span><span class="typing-cursor">|</span>
+              </span>
+            </h1>
+            <p class="hero__description">
+             Transforming complex energy data into actionable insights. Focused on electricity price forecasting, BESS optimization, energy market analytics, and developing tech solutions that solve real-world problems.
             </p>
-            <!-- <p style="font-size: 0.9rem; color: var(--muted); margin-top: 0.2rem;">
-                Tools used: R, tidyverse, ggplot2
-            </p> -->
-            <!-- Link to full notebook or GitHub repo -->
-            <!-- <a href="https://github.com/Nkeokwelu/BellaBeat-Case-Study" target="_blank" class="contact-link">
-                View Full Analysis
-            </a> -->
-        </div>
-
-        <!-- Project 2 -->
-        <div class="card">
-            <h3>FLEXWALLET – Open Banking App</h3>
-            <p>
-                FLEXWALLET is an interactive web-based banking app built with Cordova, jQuery, and the Open Bank Project API. It simulates a personal finance experience with real-time account balances, 
-                transaction history, multi-currency wallets, and nearby ATMs. Users can log in with sandbox credentials, explore accounts, filter transactions, and view currencies — all in a seamless interface.
-            </p>
-           
-            <img src="images/flex_1.png" alt="FLEXWALLET Demo Screenshot" width="270" height="170">
-       
-            <a href="https://nkeokwelu.github.io/flexwallet/" target="_blank" class="contact-link">
-                Try FLEXWALLET Live!
-            </a>
-            <i style="display: block; margin-bottom: 1.1rem;">
-                Tools & Tech: Cordova, jQuery, jQuery UI, Open Bank Project API, HTML, CSS, JavaScript
-            </i>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="card">
-            <h3>Comparing ESN and XGB for GB DA EPF without exogenous inputs</h3>
-            <div>
-                <h4>Data</h4>
-                <ul>
-                    <li>Source: Nord Pool (Hourly prices, 2020–2024).</li>
-                    <li>Preprocessed for daylight saving adjustments.</li>
-                </ul>
-            
-                <h4>Approach</h4>
-                <ul>
-                    <li>Time series analysis & decomposition.</li>
-                    <li>Supervised dataset: previous day/week → next day.</li>
-                    <li>Models: ESN (Echo State Network), XGBoost, Naive baseline.</li>
-                    <li>Hyperparameter tuning via Bayesian Optimization for ESN.</li>
-                </ul>
-            
-                <h4>Key Insights (1-Year Test Data)</h4>
-                <ol>
-                    <li>ESN outperforms both XGBoost and Naive models, achieving the lowest RMSE (£16.13) and MAPE (24.94%).</li>
-                    <li>ESN effectively captures non-linear dynamics and short-term variations in GB DA electricity prices.</li>
-                    <li>Naive performs reasonably but is less sophisticated, while XGBoost is competitive but slightly behind ESN.</li>
-                </ol>
-            
-                <h4>Conclusion</h4>
-                <p>
-                    ESN is the most effective model for GB DA EPF without exogenous inputs, 
-                    providing a strong benchmark for GB DA EPF.
-                </p>
+            <div class="hero__buttons">
+              <a href="#portfolio" class="btn btn--primary btn--large">
+                View My Work
+              </a>
+              <!-- <a href="resume.pdf" target="_blank" class="btn btn--outline btn--large">
+                Download CV
+              </a> -->
             </div>
-            <i style="display: block; margin-bottom: 1.1rem;">
-                Tools used: Python, numpy, pandas, statsmodels, bayesian-optimization, MS Excel, etc.
-            </i>
-            <!-- Link to full notebook or GitHub repo -->
-            <a href="https://github.com/Nkeokwelu/GB-DA-EPF/blob/main/DissertationESN.ipynb" target="_blank" class="contact-link">
-                View Full Analysis
-            </a>
+            <div class="hero__socials">
+              <a href="https://github.com/Nkeokwelu" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/arinze95/" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+              </a>
+              <!-- <a href="" target="_blank" rel="noopener noreferrer" class="hero__social-link" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+                <span>Twitter</span>
+              </a> -->
+            </div>
+          </div>
         </div>
-        
-        <!-- Project 4 -->
-        <div class="card">
-            <h3>GB Power Mix Evolution Dashboard</h3>
-            <p>
-                Interactive Tableau visualization showing the evolution of Great Britain's power sector over 14+ years.
-                This dashboard explores the UK's ongoing energy transition: the steady decline in fossil fuel reliance (from dominant in 2010 to 32% in 2023), 
-                the rise of renewables (led by wind at 28.9% in 2023), stable nuclear contributions (14.5%), growing imports (12.4%), 
-                and a dramatic drop in average carbon intensity — from peaks over 500 gCO₂/kWh down to 149 gCO₂/kWh in 2023. [Data Source: NESO].
-            </p>
-            <i style="display: block; margin-bottom: 1.1rem;">
-                Tools used: Tableau, MS Excel.
-            </i>
-            <!-- Link to the Tableau dashboard -->
-            <img src="images/Tableau_Dashboard.png" alt="Arinze Nkeokwelu" width="270" height="170">
-            <a href="https://public.tableau.com/app/profile/arinze.nkeokwelu/viz/GBElectricityGenerationDashboard2009-2023/Dashboard1" target="_blank" class="contact-link">
-                View the Tableau dashboard here!
-            </a>
+      </section>
+
+      <!-- About Section -->
+      <section class="about section" id="about">
+        <div class="about__container container">
+          <div class="section__header">
+            <p class="section__label"></p>
+            <h2 class="section__subtitle section__subtitle--accent">About Arinze</h2>
+          </div>
+
+          <div class="about__content">
+            <div class="about__image-wrapper">
+              <img src="images/LinProfile.jpg" alt="Arinze Nkeokwelu" class="about__image" loading="lazy" />
+            </div>
+
+            <div class="about__info">
+              <div class="about__stats">
+                <div class="about__stat">
+                  <i class="fa-solid fa-briefcase"></i>
+                  <h4 class="about__stat-title">Experience Across Sectors</h4>
+                  <p class="about__stat-value" data-target = 6>0</p><span class= "about__stat-value_suffix">+ Years</span>
+                </div>
+
+                <div class="about__stat">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <h4 class="about__stat-title">Energy Models Developed</h4>
+                  <p class="about__stat-value" data-target = 4>0</p>
+                </div>
+
+                <div class="about__stat">
+                  <i class="fa-solid fa-database"></i>
+                  <h4 class="about__stat-title">Data-Driven Insights</h4>
+                  <p class="about__stat-value" data-target =100 >0</p><span class= "about__stat-value_suffix">+ Reports</span>
+                </div>
+
+                <div class="about__stat">
+                  <i class="fa-solid fa-users"></i>
+                  <h4 class="about__stat-title">Cross-Functional Teams</h4>
+                  <p class="about__stat-value" data-target =5 >0 </p><span class= "about__stat-value_suffix">+ Teams</span>
+                </div>
+              </div>
+
+              <p class="about__description">
+                An Energy Data Analyst with a background in Electrical, Electronic, and Computer Engineering, as well as FinTech. Focused on energy data analysis, electricity price forecasting, BESS optimization, and electrical engineering. Passionate about developing sustainable tech solutions that solve real-world problems and contribute towards achieving net-zero goals.
+              </p>
+
+              <div class="about__buttons">
+                <h4>Tech Stack:</h4>
+                <span class="btn btn--primary">Python</span>
+                <span class="btn btn--primary">SQL</span>
+                <span class="btn btn--primary">MS Excel</span>
+                <span class="btn btn--primary">Power BI</span>
+                <span class="btn btn--primary">Tableau</span>
+                <span class="btn btn--primary">R</span>
+                <span class="btn btn--primary">Streamlit</span>
+                <span class="btn btn--primary">Grafana</span>
+                <span class="btn btn--primary">ML</span>
+                <span class="btn btn--primary">Optimization Modeling</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <!-- Project 5-->
-        <div class="card">
-            <h3>BellaBeat Leaf Tracker Case Study</h3>
-            
-            <p>
-                Analyzed FitBit fitness tracker data to uncover trends in activity and calorie burn, 
-                following the Google Data Analysis Process. 
-                Key insights show that the Leaf Tracker accurately measures activity, identifies calorie burn even on sedentary days, 
-                and informs marketing strategies for both active and minimally active users.
-            </p>
-            <i style="display: block; margin-bottom: 1.1rem;">
-                Tools used: R, tidyverse, ggplot2
-            </i>
-            <!-- Link to full notebook or GitHub repo -->
-            <a href="https://github.com/Nkeokwelu/Fitness-data-analysis-with-R-for-Bellabeat/blob/main/case-study-bellabeat-leaf-tracker.ipynb" target="_blank" class="contact-link">
-                View Full Analysis
-            </a>
+      <!-- Services Section -->
+      <section class="services section" id="services">
+        <div class="services__container container">
+          <div class="section__header">
+            <p class="section__label">What I Offer</p>
+            <h2 class="section__subtitle section__subtitle--accent">My Services</h2>
+          </div>
+          <div class="services__grid">
+            <article class="service-card">
+              <div class="service-card__icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3 class="service-card__title">Energy Data Analytics</h3>
+              <p class="service-card__description">
+                Analyzing complex energy datasets to uncover trends, market signals, and operational insights. Delivering data-driven intelligence that supports better decision-making for energy traders.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__icon">
+                <i class="fa-solid fa-chart-column"></i>
+              </div>
+              <h3 class="service-card__title">Electricity Price Forecasting</h3>
+              <p class="service-card__description">
+                Developing forecasting models to predict electricity price movements using statistical and machine learning techniques. Supporting trading strategies, risk management, and market analysis.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__icon">
+                <i class="fa-solid fa-battery-full"></i>
+              </div>
+              <h3 class="service-card__title">BESS Optimization</h3>
+              <p class="service-card__description">
+                Designing optimization models for battery energy storage systems to maximize revenue, improve grid efficiency, and support renewable energy integration using advanced optimization techniques.
+              </p>
+            </article>
+          </div>    
         </div>
+      </section>
 
-    </div>
+      <!-- Portfolio Section -->
+      <section class="portfolio section" id="portfolio">
+        <div class="portfolio__container container">
+          <div class="section__header">
+            <p class="section__label">My Recent Work</p>
+            <h2 class="section__subtitle section__subtitle--accent">Portfolio</h2>
+          </div>
 
-</section>
+          <div class="portfolio__grid">
+            <!-- Project Cards -->
+            <article class="project-card">
+              <div class="project-card__image-wrapper">
+                <img src=".png" alt="HiRev BESS Optimizer" class="project-card__image" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="project-card__btn project-card__btn--secondary">
+                    <i class="fa-brands fa-github"></i>
+                    Source
+                  </a>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <span class="project-card__number">01</span>
+                <h3 class="project-card__title">HiRev BESS Optimizer</h3>
+                <p class="project-card__description">
+                  Python based BESS optimization model.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">Python</span>
+                  <span class="project-card__tag">Redux</span>
+                  <span class="project-card__tag">Tailwind</span>
+                </div>
+              </div>
+            </article>
 
+            <article class="project-card">
+              <div class="project-card__image-wrapper">
+                <img src="images/flex_home_page.png" alt="FLEXWALLET" class="project-card__image" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="https://nkeokwelu.github.io/flexwallet/" target="_blank" rel="noopener noreferrer" class="project-card__btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    Live Demo
+                  </a>
+                  <a href="https://github.com/Nkeokwelu/nkeokwelu.github.io/tree/main/flexwallet" target="_blank" rel="noopener noreferrer" class="project-card__btn project-card__btn--secondary">
+                    <i class="fa-brands fa-github"></i>
+                    Source
+                  </a>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <span class="project-card__number">02</span>
+                <h3 class="project-card__title">FLEXWALLET</h3>
+                 <p class="project-card__description">
+                  FLEXWALLET is an interactive web-based banking app built with Cordova, jQuery, and the Open Bank Project API. It simulates a personal finance experience with real-time account balances, 
+                transaction history, multi-currency wallets, and nearby ATMs. Users can log in with sandbox credentials, explore accounts, filter transactions, and view currencies — all in a seamless interface.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">Javascript</span>
+                  <span class="project-card__tag">HTML</span>
+                  <span class="project-card__tag">CSS</span>
+                  <span class="project-card__tag">jQuery</span>
+                </div>
+              </div>
+            </article>
 
-<!-- ================= CONTACT SECTION ================= -->
-<section id="contact">
+            <article class="project-card">
+              <div class="project-card__image-wrapper">
+                <img src="images/GB_energy_mix.png" alt="GB Power Mix Evolution Dashboard" class="project-card__image" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="https://public.tableau.com/app/profile/arinze.nkeokwelu/viz/GBElectricityGenerationDashboard2009-2023/Dashboard1" target="_blank" rel="noopener noreferrer" class="project-card__btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    View Dashboard
+                  </a>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <span class="project-card__number">03</span>
+                <h3 class="project-card__title">GB Power Mix Evolution Dashboard</h3>
+                <p class="project-card__description">
+                  <p class="project-card__description">
+                  This interactive Tableau dashboard explores the GB's ongoing energy transition: the steady decline in fossil fuel reliance (from dominant in 2010 to 32% in 2023), 
+                  the rise of renewables (led by wind at 28.9% in 2023), stable nuclear contributions (14.5%), growing imports (12.4%), 
+                  and a dramatic drop in average carbon intensity — from peaks over 500 gCO₂/kWh down to 149 gCO₂/kWh in 2023. [Data Source: NESO].
+                </p>
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">MS Excel</span>
+                  <span class="project-card__tag">Tableau</span>
+                </div>
+              </div>
+            </article>
 
-    <h2 class="section-title">Contact</h2>
+            <article class="project-card">
+              <div class="project-card__image-wrapper">
+                <img src="images/bellabeat_viz.png" alt="BellaBeat Leaf Tracker Case Study" class="project-card__image" loading="lazy" />
+                <div class="project-card__overlay">
+                  <a href="https://github.com/Nkeokwelu/Fitness-data-analysis-with-R-for-Bellabeat/blob/main/case-study-bellabeat-leaf-tracker.ipynb" target="_blank" rel="noopener noreferrer" class="project-card__btn">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    View Full Analysis
+                  </a>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <span class="project-card__number">04</span>
+                <h3 class="project-card__title">BellaBeat Leaf Tracker Case Study</h3>
+                 <p class="project-card__description">
+                    Performed an in-depth data analysis in R to assess how Bellabeat could refine marketing strategies for their Leaf Tracker using Fitbit data. Key findings show the Leaf Tracker accurately measures activity levels and estimates calorie burn even on sedentary days, providing actionable insights to guide campaigns for both highly active and less active users.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">R</span> 
+                  <span class="project-card__tag">ggplot2</span>
+                  <span class="project-card__tag">tidyverse</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <!-- Email -->
-    <p>Email: 
-        <a href="mailto:nkeokweluarinze@gmail.com" class="contact-link">
-            nkeokweluarinze@gmail.com
-        </a>
-    </p>
+      <!-- Contact Section -->
+      <section class="contact section" id="contact">
+        <div class="contact__container container">
+          <div class="section__header">
+            <p class="section__label">Get In Touch</p>
+            <h2 class="section__subtitle section__subtitle--accent">Contact Me</h2>
+          </div>
 
-    <!-- GitHub -->
-    <p>GitHub: 
-        <a href="https://github.com/Nkeokwelu" target="_blank" class="contact-link">
-            github.com/Nkeokwelu
-        </a>
-    </p>
+          <div class="contact__content">
+            <div class="contact__info">
+              <div class="contact__card">
+                <div class="contact__card-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact__card-details">
+                  <h4 class="contact__card-title">Email</h4>
+                  <p class="contact__card-value">nkeokweluarinze@gmail.com</p>
+                  <a href="mailto:nkeokweluarinze@gmail.com" class="contact__card-link">
+                    Send a Message <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
 
-    <!-- LinkedIn -->
-    <p>LinkedIn: 
-        <a href="https://www.linkedin.com/in/arinze95/" target="_blank" class="contact-link">
-            linkedin.com/in/arinze95/
-        </a>
-    </p>
+              <div class="contact__card">
+                <div class="contact__card-icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contact__card-details">
+                  <h4 class="contact__card-title">WhatsApp</h4>
+                  <p class="contact__card-value">+447902653542</p>
+                  <a href="https://wa.me/447902653542" target="_blank" rel="noopener noreferrer" class="contact__card-link">
+                    Send a Message <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
 
-    <!-- Personal website -->
-    <p>Website:
-        <a href="https://nkeokwelu.github.io/" target="_blank" class="contact-link">
-            https://nkeokwelu.github.io/
-        </a>
-    </p>
+            <form class="contact__form" id="contact-form">
+              <div class="contact__form-group">
+                <input type="text" name="name" class="contact__input" placeholder="Your Full Name" required autocomplete="name" />
+              </div>
+              <div class="contact__form-group">
+                <input type="email" name="email" class="contact__input" placeholder="Your Email" required autocomplete="email" />
+              </div>
+              <div class="contact__form-group">
+                <textarea name="message" class="contact__textarea" placeholder="Your Message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
-</section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container container">
+        <p class="footer__copyright">
+          &copy; <span id="year"></span> Arinze Nkeokwelu. All Rights Reserved.
+        </p>
+        <div class="footer__socials">
+          <a href="https://github.com/Nkeokwelu" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/arinze95/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:nkeokweluarinze@gmail.com" class="footer__social-link" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
 
-
-<!-- ================= FOOTER ================= -->
-<footer>
-    © 2026 Energy Data Analyst Portfolio
-</footer>
-
-
-<!-- ================= JAVASCRIPT ================= -->
-<script>
-
-    // Smooth scroll to a section when button is clicked
-    function scrollToSection(id) {
-        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Simple animated counter effect
-    const counters = document.querySelectorAll('.stat');
-    const speed = 100;
-
-    counters.forEach(counter => {
-
-        const updateCount = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
-            const increment = target / speed;
-
-            if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCount, 20);
-            } else {
-                counter.innerText = target;
-            }
-        };
-
-        updateCount();
-    });
-
-</script>
-
-</body>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
 </html>
