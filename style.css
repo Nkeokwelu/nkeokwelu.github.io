@@ -537,7 +537,7 @@ body.light-mode .hero__shape--3 {
 
 .hero__title-highlight {
   display: block;
-  font-size: clamp(3rem, 4vw, 4.5rem);
+  font-size: clamp(1rem, 2vw, 2.5rem);
   color: var(--color-accent);
   min-height: 1.2em;
 }
