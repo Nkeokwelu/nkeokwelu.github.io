@@ -43,7 +43,7 @@
 
   // ==================== TYPING ANIMATION ====================
   const typingAnimation = {
-    words: ['Energy Data Analyst', 'Electrical Engineer', 'Data Analyst', 'Fintech Specialist'],
+    words: ['Energy Data Analyst', 'Electrical Engineer', 'Python Developer'],
     currentWordIndex: 0,
     currentCharIndex: 0,
     isDeleting: false,
